@@ -22,6 +22,7 @@ function tabStyle(
   activeColor,
   inactiveColor,
   swipeThreshold,
+  tabWidth,
   scrollable
 ) {
   var styles = [];
@@ -44,7 +45,12 @@ function tabStyle(
     styles.push('color:' + titleColor);
   }
 
-  if (scrollable && ellipsis) {
+  if (tabWidth) {
+    styles.push('width:' + tabWidth + 'rpx');  //手动股东宽度
+    styles.push('flex-shrink: 0');  //手动股东宽度
+    styles.push('flex-grow: 0');  //手动股东宽度
+    styles.push('flex-basis: auto');  //手动股东宽度
+  } else if (scrollable && ellipsis) {
     styles.push('flex-basis:' + 88 / swipeThreshold + '%');
   }
 

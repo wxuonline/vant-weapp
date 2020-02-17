@@ -9,5 +9,8 @@
     "wx": false,
     "Behavior": false
   },
-  "extends": ["@vant"]
+  "extends": ["@vant"],
+  "rules": {
+    "linebreak-style": ["off", "windows"],
+  },
 }

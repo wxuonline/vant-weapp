@@ -28,7 +28,15 @@ VantComponent({
                 }
                 this.observeContainer();
             }
-        }
+        },
+        stickyData: {
+            type: Object,
+            observer() {
+                if (!this.data.height)
+                    return;
+                this.observeContainer();
+            }
+        },
     },
     data: {
         height: 0,

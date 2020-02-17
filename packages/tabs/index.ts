@@ -35,6 +35,7 @@ VantComponent({
       observer: 'setLine'
     },
     sticky: Boolean,
+    stickyData: Object,
     animated: {
       type: Boolean,
       observer() {
@@ -93,6 +94,10 @@ VantComponent({
           scrollable: this.children.length > value || !this.data.ellipsis
         });
       }
+    },
+    tabWidth: {
+      type: Number,
+      value: 0
     },
     offsetTop: {
       type: Number,
